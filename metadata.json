@@ -1,0 +1,6 @@
+{
+  "name": "movie-database",
+  "identifier": "com.peacock.app.movie-database",
+  "version": "1.0.0",
+  "icon": "./static/icon.png"
+}
