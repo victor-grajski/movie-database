@@ -42,9 +42,28 @@ export class Movie extends Lightning.Component {
     this.addDataToScreen()
   }
 
+  _init() {
+    this.tag('Background')
+      .animation({
+        duration: 5,
+        repeat: 0,
+        actions: [
+          {
+            p: 'alpha',
+            v: {
+              0: 0,
+              0.33: 0.33,
+              0.66: 0.66,
+              1: 1,
+            },
+          },
+        ],
+      })
+      .start()
+  }
+
   set params(data) {
     this.movieID = data.movieID
-    console.log(this.movieID)
   }
 
   async addDataToScreen() {
